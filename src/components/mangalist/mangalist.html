@@ -1,0 +1,10 @@
+<div>
+  <div v-if="loading">Loading...</div>
+  <b-container v-if="!loading" class="content">
+    <b-row>
+      <b-col class="content">
+        <manga v-for="manga in mangaList" v-bind:key="manga.id" v-bind:manga="manga"></manga>
+      </b-col>
+    </b-row>
+  </b-container>
+</div>

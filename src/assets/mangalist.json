@@ -1,0 +1,19 @@
+[{
+  "id": "a07b7408-c5c6-4fe4-92c6-af3f2be2960a",
+  "name": "Sample Manga",
+  "imageUrl": "/assets/img/logo.png",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus quam ex, ac tempor tortor semper dapibus. Donec gravida nulla egestas, rutrum justo quis, vestibulum libero. Etiam ac nibh laoreet, ullamcorper nisl et, sodales urna. Vestibulum in augue commodo, faucibus risus non, sagittis nibh. Quisque viverra odio enim, in varius ante tempor a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend iaculis ipsum et lacinia. Vivamus quis est quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec vitae nunc non nisl pretium lacinia sed nec ligula. ",
+  "genres": [],
+  "author": "John",
+  "artist": "John"
+},
+  {
+    "id": "a07c7408-c5c6-4fe4-92c6-af3f2be2960a",
+    "name": "Sample Manga 2",
+    "imageUrl": "/assets/img/logo.png",
+    "description": "Vestibulum sollicitudin ex at tellus feugiat sollicitudin. Mauris congue, orci nec bibendum dapibus, lacus elit molestie nunc, id maximus nulla nulla a diam. Mauris varius malesuada lectus, nec porta nibh lacinia sit amet. Vivamus eu imperdiet massa, non facilisis nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet dignissim nisl. Etiam ac ipsum magna. Donec eros nulla, volutpat vitae velit et, eleifend sagittis mi. Nullam odio lorem, fermentum ut tempus sit amet, condimentum et massa. ",
+    "genres": [],
+    "author": "John",
+    "artist": "John"
+  }
+]

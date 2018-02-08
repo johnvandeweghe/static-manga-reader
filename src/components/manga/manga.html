@@ -1,0 +1,19 @@
+<b-container class="manga" :fluid="true">
+  <b-row>
+    <b-col cols="2"><img v-bind:src="manga.imageUrl" class="thumb"></b-col>
+    <b-col cols="10">
+      <b-row>
+        <label>Manga Name:</label> <span class="value">{{ manga.name }}</span>
+      </b-row>
+      <b-row>
+        <label>Author:</label> <span class="value">{{ manga.author }}</span>
+      </b-row>
+      <b-row>
+        <label>Artist:</label> <span class="value">{{ manga.artist }}</span>
+      </b-row>
+      <b-row>
+        <label>Description:</label> <span class="value">{{ manga.description }}</span>
+      </b-row>
+    </b-col>
+  </b-row>
+</b-container>
