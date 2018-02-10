@@ -1,6 +1,15 @@
+import {Chapter} from "./chapter";
 export class Manga {
 
-  constructor(private _id: string, private _name: string, private _imageUrl: string, private _description: string, private _author: string, private _artist: string, private _genres: string[]) {
+  constructor(
+    private _id: string,
+    private _name: string,
+    private _imageUrl: string,
+    private _description: string,
+    private _author: string,
+    private _artist: string,
+    private _genres: string[]
+  ) {
 
   }
 

@@ -2,9 +2,7 @@ import Vue from 'vue'
 import VueRouter, { Location, Route, RouteConfig } from 'vue-router'
 
 const mangaListComponent = () => import('./components/mangalist').then(({ MangaListComponent }) => MangaListComponent)
-// const homeComponent = () => import(/* webpackChunkName: 'home' */'./components/home').then(({ MangaListComponent }) => MangaListComponent)
-// const aboutComponent = () => import(/* webpackChunkName: 'about' */'./components/about').then(({ AboutComponent }) => AboutComponent)
-// const listComponent = () => import(/* webpackChunkName: 'list' */'./components/list').then(({ ListComponent }) => ListComponent)
+const mangaComponent = () => import('./components/manga').then(({ MangaComponent }) => MangaComponent)
 
 Vue.use(VueRouter)
 
@@ -12,6 +10,11 @@ export const createRoutes: () => RouteConfig[] = () => [
   {
     path: '/',
     component: mangaListComponent
+  },
+  {
+    path: '/manga/:mangaId',
+    name: 'manga',
+    component: mangaComponent
   }
 ]
 

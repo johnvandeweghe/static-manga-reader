@@ -1,3 +1,30 @@
-.content h1 {
+.mangalist {
+  .content h1 {
     text-align: center;
+  }
+  .manga {
+    border-radius: 1em;
+    border: 1px solid;
+    padding: 5px;
+    margin-bottom: 1em;
+
+    cursor: pointer;
+
+    img.thumb {
+      width: 100%;
+    }
+
+    label {
+      font-weight: bold;
+      margin-right: 5px;
+    }
+
+    .value {
+      padding-right: 1em;
+    }
+  }
+
+  .manga:hover {
+    background-color: #e6e6e6;
+  }
 }

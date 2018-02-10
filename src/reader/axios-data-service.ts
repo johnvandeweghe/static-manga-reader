@@ -1,6 +1,6 @@
-import {Manga} from "./manga";
-import {Chapter} from "./chapter";
-import {Page} from "./page";
+import {Manga} from "./data/manga";
+import {Chapter} from "./data/chapter";
+import {Page} from "./data/page";
 import {AxiosInstance, AxiosPromise} from "axios";
 
 export class AxiosDataService {
@@ -12,11 +12,15 @@ export class AxiosDataService {
     return this.axiosClient.get<Manga[]>(this.basePath + 'mangalist.json')
   }
 
-  getChapters(mangaId: string): AxiosPromise<Chapter[]> {
-    return this.axiosClient.get<Chapter[]>(this.basePath + mangaId + '.json')
+  getManga(mangaId: string): AxiosPromise<Manga> {
+    return this.axiosClient.get<Manga>(this.basePath + mangaId + '.json')
   }
 
-  getPages(chapterId: string): AxiosPromise<Page[]> {
+  getMangaChapters(mangaId: string): AxiosPromise<Chapter[]> {
+    return this.axiosClient.get<Chapter[]>(this.basePath + mangaId + '_chapters.json')
+  }
+
+  getChapterPages(chapterId: string): AxiosPromise<Page[]> {
     return this.axiosClient.get<Page[]>(this.basePath + chapterId + '.json')
   }
 }
