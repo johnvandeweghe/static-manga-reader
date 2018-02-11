@@ -1,0 +1,76 @@
+<div>
+  <div v-if="loading != 0">Loading...</div>
+  <b-container v-if="loading == 0" class="">
+    <b-row>
+      <b-col xs="auto"><h1><a href="" v-on:click.stop.prevent="goToManga(manga.id)">{{ manga.name }}</a></h1></b-col>
+      <b-col xs="auto"><h2>{{ chapter.label }}</h2></b-col>
+    </b-row>
+    <b-row>
+      <b-col>
+        <button
+          v-on:click.stop.prevent="goToChapter(manga.id, firstChapter.id)"
+          :disabled="firstChapter == chapter"
+          alt="First Chapter"
+        >|<</button>
+      </b-col>
+      <b-col>
+        <button
+          v-on:click.stop.prevent="goToChapter(manga.id, previousChapter.id)"
+          :disabled="previousChapter === null"
+          alt="Previous Chapter"
+        ><</button>
+      </b-col>
+      <b-col>
+        <button
+          v-on:click.stop.prevent="goToChapter(manga.id, nextChapter.id)"
+          :disabled="nextChapter === null"
+          alt="Next Chapter"
+        >></button>
+      </b-col>
+      <b-col>
+        <button
+          v-on:click.stop.prevent="goToChapter(manga.id, lastChapter.id)"
+          :disabled="lastChapter == chapter"
+          alt="Last Chapter"
+        >>|</button>
+      </b-col>
+    </b-row>
+    <b-row
+      class="page"
+      v-for="page in pages"
+      v-bind:key="page.imageUrl"
+    >
+      <b-col><img v-bind:src="page.imageUrl"></b-col>
+    </b-row>
+    <b-row>
+      <b-col>
+        <button
+          v-on:click.stop.prevent="goToChapter(manga.id, firstChapter.id)"
+          :disabled="firstChapter == chapter"
+          alt="First Chapter"
+        >|<</button>
+      </b-col>
+      <b-col>
+        <button
+          v-on:click.stop.prevent="goToChapter(manga.id, previousChapter.id)"
+          :disabled="previousChapter === null"
+          alt="Previous Chapter"
+        ><</button>
+      </b-col>
+      <b-col>
+        <button
+          v-on:click.stop.prevent="goToChapter(manga.id, nextChapter.id)"
+          :disabled="nextChapter === null"
+          alt="Next Chapter"
+        >></button>
+      </b-col>
+      <b-col>
+        <button
+          v-on:click.stop.prevent="goToChapter(manga.id, lastChapter.id)"
+          :disabled="lastChapter == chapter"
+          alt="Last Chapter"
+        >>|</button>
+      </b-col>
+    </b-row>
+  </b-container>
+</div>

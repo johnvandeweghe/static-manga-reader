@@ -1,6 +1,6 @@
 export class Chapter {
 
-  constructor(private _id: string, private _label: string, private _order: number, private _releaseDate: Date) {
+  constructor(private _id: string, private _label: string, private _releaseDate: Date) {
 
   }
 
@@ -10,10 +10,6 @@ export class Chapter {
 
   get label(): string {
     return this._label;
-  }
-
-  get order(): number {
-    return this._order;
   }
 
   get releaseDate(): Date {

@@ -26,12 +26,6 @@ export class MangaComponent extends Vue {
   manga: Manga = null
   chapters: Chapter[] = []
 
-  get sortedChapters(): Chapter[] {
-    return this.chapters.sort((a: Chapter, b: Chapter): number => {
-      return a.order == b.order ? 0 : (a.order > b.order ? 1 : -1)
-    })
-  }
-
   loading: number = 2
 
   mounted() {
@@ -45,11 +39,15 @@ export class MangaComponent extends Vue {
     this.dataService.getManga(mangaId).then((response: AxiosResponse<Manga>) => {
       this.manga = response.data
       this.loading--;
+    }).catch(() => {
+      this.$router.push("/")
     })
 
     this.dataService.getMangaChapters(mangaId).then((response: AxiosResponse<Chapter[]>) => {
       this.chapters = response.data
       this.loading--
+    }).catch(() => {
+      this.$router.push("/")
     })
   }
 

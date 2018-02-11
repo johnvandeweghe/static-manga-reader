@@ -1,8 +1,8 @@
 <div>
-  <div v-if="loading != 0">Loading...</div>
-  <b-container v-if="loading == 0" class="content manga">
+  <div v-if="loading != 0">loading...<br></div>
+  <b-container v-else class="manga">
     <b-row>
-      <b-col sm="2" md="3" lg="2"><img v-bind:src="manga.imageUrl" class="thumb"></b-col>
+      <b-col sm="2" md="3" lg="2"><img v-bind:src="manga.imageUrl"></b-col>
       <b-col md="9" lg="7">
         <b-container :fluid="true">
           <b-row>
@@ -27,7 +27,7 @@
     </b-row>
     <b-row>
       <b-col>
-        <b-table class="chapters" :striped="true" :items="sortedChapters" :fields="['label', 'releaseDate']" @row-clicked="goToChapter(manga.id, $event.id)">
+        <b-table class="chapters" :striped="true" :items="chapters" :fields="['label', 'releaseDate']" @row-clicked="goToChapter(manga.id, $event.id)">
         </b-table>
       </b-col>
     </b-row>

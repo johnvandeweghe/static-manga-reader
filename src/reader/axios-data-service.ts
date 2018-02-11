@@ -9,18 +9,18 @@ export class AxiosDataService {
   }
 
   getMangaList(): AxiosPromise<Manga[]> {
-    return this.axiosClient.get<Manga[]>(this.basePath + 'mangalist.json')
+    return this.axiosClient.get<Manga[]>(this.basePath + "mangalist.json")
   }
 
   getManga(mangaId: string): AxiosPromise<Manga> {
-    return this.axiosClient.get<Manga>(this.basePath + mangaId + '.json')
+    return this.axiosClient.get<Manga>(this.basePath + "meta/m-" + mangaId + ".json")
   }
 
   getMangaChapters(mangaId: string): AxiosPromise<Chapter[]> {
-    return this.axiosClient.get<Chapter[]>(this.basePath + mangaId + '_chapters.json')
+    return this.axiosClient.get<Chapter[]>(this.basePath + "meta/c-" + mangaId + ".json")
   }
 
   getChapterPages(chapterId: string): AxiosPromise<Page[]> {
-    return this.axiosClient.get<Page[]>(this.basePath + chapterId + '.json')
+    return this.axiosClient.get<Page[]>(this.basePath + "meta/p-" + chapterId + ".json")
   }
 }
