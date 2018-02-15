@@ -1,10 +1,10 @@
 <div>
   <div v-if="loading != 0">loading...<br></div>
-  <b-container v-else class="manga">
+  <b-container v-else class="manga text-center">
     <b-row>
-      <b-col sm="2" md="3" lg="2"><img v-bind:src="manga.imageUrl"></b-col>
-      <b-col md="9" lg="7">
-        <b-container :fluid="true">
+      <b-col sm="3"><img v-bind:src="manga.imageUrl"></b-col>
+      <b-col sm="7">
+        <b-container :fluid="true" class="text-left">
           <b-row>
             <h1>{{ manga.name }}</h1>
           </b-row>

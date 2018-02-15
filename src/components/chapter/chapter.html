@@ -1,6 +1,6 @@
 <div>
   <div v-if="loading != 0">Loading...</div>
-  <b-container v-if="loading == 0" class="">
+  <b-container v-if="loading == 0" class="text-center">
     <b-row>
       <b-col xs="auto"><h1><a href="" v-on:click.stop.prevent="goToManga(manga.id)">{{ manga.name }}</a></h1></b-col>
       <b-col xs="auto"><h2>{{ chapter.label }}</h2></b-col>
