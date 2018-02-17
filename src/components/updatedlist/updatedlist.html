@@ -1,0 +1,35 @@
+<div>
+  <div v-if="loading">loading...</div>
+  <b-container v-if="!loading" class="updatedlist">
+    <b-row>
+      <b-col>
+        <b-container
+          class="manga"
+          :fluid="true"
+          v-for="mangaChapter in updatedList"
+          v-bind:key="mangaChapter.chapter.id"
+        >
+          <router-link class="chapter-link" :to="{name: 'chapter', params: {mangaId: mangaChapter.manga.id, chapterId: mangaChapter.chapter.id}}">
+            <b-row>
+              <b-col md="2"><img v-bind:src="mangaChapter.manga.imageUrl" class="thumb"></b-col>
+              <b-col md="10">
+                <b-container :fluid="true">
+                  <b-row>
+                    <label>Manga Name:</label> <router-link :to="{name: 'manga', params: {mangaId: mangaChapter.manga.id}}"><span class="value">{{ mangaChapter.manga.name }}</span></router-link>
+                  </b-row>
+                  <b-row>
+                    <label>Chapter:</label> <span class="value">{{ mangaChapter.chapter.label }}</span>
+                  </b-row>
+                  <b-row>
+                    <label>Release Date:</label> <span class="value">{{ mangaChapter.chapter.releaseDate | moment("from", "now") }}</span>
+                  </b-row>
+                </b-container>
+              </b-col>
+            </b-row>
+          </router-link>
+        </b-container>
+
+      </b-col>
+    </b-row>
+  </b-container>
+</div>

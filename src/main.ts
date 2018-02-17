@@ -7,6 +7,7 @@ const navbarComponent = () => import('./components/navbar').then(({ NavbarCompon
 
 import './sass/main.scss'
 import {AxiosDataService} from "./reader/axios-data-service";
+Vue.use(require('vue-moment'));
 
 const dataService = new AxiosDataService("/assets/", axios);
 

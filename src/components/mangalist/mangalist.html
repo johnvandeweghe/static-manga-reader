@@ -8,8 +8,8 @@
           :fluid="true"
           v-for="manga in mangaList"
           v-bind:key="manga.id"
-          v-on:click.stop.prevent="goToManga(manga.id)"
         >
+          <router-link class="manga-link" :to="{name: 'manga', params: {mangaId: manga.id}}">
           <b-row>
             <b-col md="2"><img v-bind:src="manga.imageUrl" class="thumb"></b-col>
             <b-col md="10">

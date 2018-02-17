@@ -1,10 +1,18 @@
 [
   {
-    "id": "6fbd142b-dafb-4ead-be6e-b5b2f4a5201f",
-    "name": "Epic of Gilgamesh",
-    "imageUrl": "/assets/images/m-6fbd142b-dafb-4ead-be6e-b5b2f4a5201f",
-    "author": "Hwan Daeng",
-    "artist": "Hwan Daeng",
-    "description": "Trainee Knight Trudia gets kicked out of the knight squad becaus..."
+    "id": "a07b7408-c5c6-4fe4-92c6-af3f2be2960a",
+    "name": "Sample Manga",
+    "imageUrl": "/assets/img/logo.png",
+    "author": "John",
+    "artist": "John",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellent..."
+  },
+  {
+    "id": "a07c7408-c5c6-4fe4-92c6-af3f2be2960a",
+    "name": "Sample Manga 2",
+    "imageUrl": "/assets/img/logo.png",
+    "author": "John",
+    "artist": "John",
+    "description": "Vestibulum sollicitudin ex at tellus feugiat sollicitudin. Mauri..."
   }
 ]

@@ -22,12 +22,15 @@
     </b-row>
     <b-row>
       <b-col>
-        <h2>Chapters</h2>
+        <h2 class="text-left">Chapters</h2>
       </b-col>
     </b-row>
     <b-row>
       <b-col>
         <b-table class="chapters" :striped="true" :items="chapters" :fields="['label', 'releaseDate']" @row-clicked="goToChapter(manga.id, $event.id)">
+          <template slot="releaseDate" slot-scope="data">
+            {{ data.value | moment("from", "now") }}
+          </template>
         </b-table>
       </b-col>
     </b-row>

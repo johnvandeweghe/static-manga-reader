@@ -23,7 +23,8 @@ export class NavbarComponent extends Vue {
 
   object: { default: string } = { default: 'Default object property!' }
   links: Link[] = [
-    new Link('Manga List', '/'),
+    new Link('Recently Updated', '/'),
+    new Link('Manga List', '/manga-list')
   ]
 
   protected logger: Logger

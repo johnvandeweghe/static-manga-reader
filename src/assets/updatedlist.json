@@ -1,0 +1,47 @@
+[
+  {
+    "chapter": {
+      "id": "3658E791-2D1B-C460-EBAB-63D32DB50FE1",
+      "label": "Chapter 1",
+      "releaseDate": 1512141932
+    },
+    "manga": {
+      "id": "a07b7408-c5c6-4fe4-92c6-af3f2be2960a",
+      "name": "Sample Manga",
+      "imageUrl": "/assets/img/logo.png",
+      "author": "John",
+      "artist": "John",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellent..."
+    }
+  },
+  {
+    "chapter": {
+      "id": "4658E791-2D1B-C460-EBAB-63D32DB50FE2",
+      "label": "Chapter 2",
+      "releaseDate": 1514151932
+    },
+    "manga": {
+      "id": "a07b7408-c5c6-4fe4-92c6-af3f2be2960a",
+      "name": "Sample Manga",
+      "imageUrl": "/assets/img/logo.png",
+      "author": "John",
+      "artist": "John",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellent..."
+    }
+  },
+  {
+    "chapter": {
+      "id": "5658E791-2D1B-C460-EBAB-63D32DB50FE3",
+      "label": "Chapter 3",
+      "releaseDate": 1518181932
+    },
+    "manga": {
+      "id": "a07b7408-c5c6-4fe4-92c6-af3f2be2960a",
+      "name": "Sample Manga",
+      "imageUrl": "/assets/img/logo.png",
+      "author": "John",
+      "artist": "John",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellent..."
+    }
+  }
+]

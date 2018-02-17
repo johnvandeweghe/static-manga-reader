@@ -31,14 +31,4 @@ export class MangaListComponent extends Vue {
       this.loading = false
     })
   }
-
-  goToManga(mangaId: string) {
-    this.$router.push({
-      name: "manga",
-      params: {
-        mangaId: mangaId
-      }
-    })
-  }
-
 }
