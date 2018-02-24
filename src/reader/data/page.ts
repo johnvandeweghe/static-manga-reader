@@ -1,9 +1,9 @@
 export class Page {
-  constructor(private _imageUrl: string) {
+  constructor (private _imageUrl: string) {
 
   }
 
-  get imageUrl(): string {
-    return this._imageUrl;
+  get imageUrl (): string {
+    return this._imageUrl
   }
 }

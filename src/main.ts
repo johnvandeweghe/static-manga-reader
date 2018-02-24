@@ -6,10 +6,10 @@ const navbarComponent = () => import('./components/navbar').then(({ NavbarCompon
 // const navbarComponent = () => import(/* webpackChunkName: 'navbar' */'./components/navbar').then(({ NavbarComponent }) => NavbarComponent)
 
 import './sass/main.scss'
-import {AxiosDataService} from "./reader/axios-data-service";
-Vue.use(require('vue-moment'));
+import { AxiosDataService } from './reader/axios-data-service'
+Vue.use(require('vue-moment'))
 
-const dataService = new AxiosDataService("/assets/", axios);
+const dataService = new AxiosDataService('/assets/', axios)
 
 // tslint:disable-next-line:no-unused-expression
 new Vue({
@@ -19,6 +19,6 @@ new Vue({
     'navbar': navbarComponent
   },
   provide: {
-    "DataService": dataService
+    'DataService': dataService
   }
 })

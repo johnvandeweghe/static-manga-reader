@@ -1,14 +1,14 @@
-import {Prop, Component, Vue, Inject, Watch} from "vue-property-decorator";
-import {Manga} from "../../reader/data/manga";
+import { Prop, Component, Vue, Inject, Watch } from 'vue-property-decorator'
+import { Manga } from '../../reader/data/manga'
 import bContainer from 'bootstrap-vue/es/components/layout/container'
 import bCol from 'bootstrap-vue/es/components/layout/col'
 import bRow from 'bootstrap-vue/es/components/layout/row'
 import './chapter.scss'
-import {AxiosResponse} from "axios";
-import {Chapter} from "../../reader/data/chapter";
-import {AxiosDataService} from "../../reader/axios-data-service";
-import {Page} from "../../reader/data/page";
-import * as _ from "underscore";
+import { AxiosResponse } from 'axios'
+import { Chapter } from '../../reader/data/chapter'
+import { AxiosDataService } from '../../reader/axios-data-service'
+import { Page } from '../../reader/data/page'
+import * as _ from 'underscore'
 
 @Component({
   template: require('./chapter.html'),
@@ -20,7 +20,7 @@ import * as _ from "underscore";
 })
 export class ChapterComponent extends Vue {
 
-  @Inject("DataService")
+  @Inject('DataService')
   dataService: AxiosDataService
 
   manga: Manga = null
@@ -28,24 +28,24 @@ export class ChapterComponent extends Vue {
   chapterId: string = null
   pages: Page[] = []
 
-  get chapter(): Chapter {
+  get chapter (): Chapter {
     return _.find(this.chapters, (chapter: Chapter): boolean => {
       return chapter.id === this.chapterId
     })
   }
 
-  get firstChapter(): Chapter {
+  get firstChapter (): Chapter {
     return this.chapters[0]
   }
 
-  get previousChapter(): Chapter {
+  get previousChapter (): Chapter {
     let chapterIndex = _.findIndex(this.chapters, (chapter: Chapter): boolean => {
       return chapter.id === this.chapterId
     })
     return this.chapters[chapterIndex - 1] || null
   }
 
-  get nextChapter(): Chapter {
+  get nextChapter (): Chapter {
     let chapterIndex = _.findIndex(this.chapters, (chapter: Chapter): boolean => {
       return chapter.id === this.chapterId
     })
@@ -53,24 +53,24 @@ export class ChapterComponent extends Vue {
     return this.chapters[chapterIndex + 1] || null
   }
 
-  get lastChapter(): Chapter {
+  get lastChapter (): Chapter {
     return this.chapters[this.chapters.length - 1]
   }
 
   loading: number = 3
 
-  mounted() {
+  mounted () {
     this.load()
   }
 
-  load() {
+  load () {
     this.loading = 3
 
     let mangaId = this.$route.params.mangaId || null
     let chapterId = this.$route.params.chapterId || null
     if (mangaId === null) {
-      this.$router.push("/")
-    } else if(chapterId === null) {
+      this.$router.push('/')
+    } else if (chapterId === null) {
       this.goToManga(mangaId)
     }
 
@@ -78,16 +78,16 @@ export class ChapterComponent extends Vue {
 
     this.dataService.getManga(mangaId).then((response: AxiosResponse<Manga>) => {
       this.manga = response.data
-      this.loading--;
+      this.loading--
     }).catch(() => {
-      this.$router.push("/")
+      this.$router.push('/')
     })
 
     this.dataService.getMangaChapters(mangaId).then((response: AxiosResponse<Chapter[]>) => {
       this.chapters = response.data
       this.loading--
     }).catch(() => {
-      this.$router.push("/")
+      this.$router.push('/')
     })
 
     this.dataService.getChapterPages(chapterId).then((response: AxiosResponse<Page[]>) => {
@@ -99,13 +99,13 @@ export class ChapterComponent extends Vue {
   }
 
   @Watch('$route')
-  onRoute(to, from) {
+  onRoute (to, from) {
     this.load()
   }
 
-  goToChapter(mangaId: string, chapterId: string) {
+  goToChapter (mangaId: string, chapterId: string) {
     this.$router.push({
-      name: "chapter",
+      name: 'chapter',
       params: {
         mangaId: mangaId,
         chapterId: chapterId
@@ -113,9 +113,9 @@ export class ChapterComponent extends Vue {
     })
   }
 
-  goToManga(mangaId: string) {
+  goToManga (mangaId: string) {
     this.$router.push({
-      name: "manga",
+      name: 'manga',
       params: {
         mangaId: mangaId
       }

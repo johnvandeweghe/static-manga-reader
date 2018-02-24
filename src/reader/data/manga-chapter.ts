@@ -1,16 +1,16 @@
-import {Manga} from "./manga";
-import {Chapter} from "./chapter";
+import { Manga } from './manga'
+import { Chapter } from './chapter'
 
 export class MangaChapter {
-  constructor(private _manga: Manga, private _chapter: Chapter) {
+  constructor (private _manga: Manga, private _chapter: Chapter) {
 
   }
 
-  get manga(): Manga {
-    return this._manga;
+  get manga (): Manga {
+    return this._manga
   }
 
-  get chapter(): Chapter {
-    return this._chapter;
+  get chapter (): Chapter {
+    return this._chapter
   }
 }

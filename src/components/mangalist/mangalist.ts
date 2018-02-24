@@ -1,12 +1,12 @@
-import {Component, Inject, Vue} from 'vue-property-decorator'
+import { Component, Inject, Vue } from 'vue-property-decorator'
 import bContainer from 'bootstrap-vue/es/components/layout/container'
 import bCol from 'bootstrap-vue/es/components/layout/col'
 import bRow from 'bootstrap-vue/es/components/layout/row'
 
 import './mangalist.scss'
-import {AxiosDataService} from "../../reader/axios-data-service";
-import {Manga} from "../../reader/data/manga";
-import {AxiosResponse} from "axios";
+import { AxiosDataService } from '../../reader/axios-data-service'
+import { Manga } from '../../reader/data/manga'
+import { AxiosResponse } from 'axios'
 
 @Component({
   template: require('./mangalist.html'),
@@ -18,13 +18,13 @@ import {AxiosResponse} from "axios";
 })
 export class MangaListComponent extends Vue {
 
-  @Inject("DataService")
+  @Inject('DataService')
   dataService: AxiosDataService
 
   mangaList: Manga[] = []
   loading: boolean = false
 
-  mounted() {
+  mounted () {
     this.loading = true
     this.dataService.getMangaList().then((response: AxiosResponse<Manga[]>) => {
       this.mangaList = response.data

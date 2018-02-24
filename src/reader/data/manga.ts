@@ -1,7 +1,6 @@
-import {Chapter} from "./chapter";
 export class Manga {
 
-  constructor(
+  constructor (
     private _id: string,
     private _name: string,
     private _imageUrl: string,
@@ -13,31 +12,31 @@ export class Manga {
 
   }
 
-  get id(): string {
-    return this._id;
+  get id (): string {
+    return this._id
   }
 
-  get name(): string {
-    return this._name;
+  get name (): string {
+    return this._name
   }
 
-  get imageUrl(): string {
-    return this._imageUrl;
+  get imageUrl (): string {
+    return this._imageUrl
   }
 
-  get description(): string {
-    return this._description;
+  get description (): string {
+    return this._description
   }
 
-  get author(): string {
-    return this._author;
+  get author (): string {
+    return this._author
   }
 
-  get artist(): string {
-    return this._artist;
+  get artist (): string {
+    return this._artist
   }
 
-  get genres(): string[] {
-    return this._genres;
+  get genres (): string[] {
+    return this._genres
   }
 }
