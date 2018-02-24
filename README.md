@@ -7,7 +7,7 @@ A manga/webtoon reader written to cut costs, and boost speeds of scanalator/tran
 - Entirely static
     - No server side languages required. Once built, this reader can be deployed entirely on static web hosting; S3/Cloudfront, GitHub Pages, you name it.
     - Due to the above, this reader is super fast. Without any server side processing, performance is purely network bandwidth based.
-    - Again due to the above, hosting is really affordable for this reader. Even with 100s of GBs of images, hosting works out to tens of dollars per month (more with tons of views, but that's a great problem to have).
+    - Again due to the above, hosting is really affordable for this reader. Small sites can often get by for under a few $s a month. Even with 100s of GBs of images, hosting works out to tens of $s per month (more with tons of views, but that's a great problem to have).
 - Simple/Minimalistic
     - This reader has just the bare minimum to read hosted manga/webtoons. No bloat.
     - Because there is so little going on overall, it's very easy to customize (or add to if desired).
@@ -19,6 +19,12 @@ A manga/webtoon reader written to cut costs, and boost speeds of scanalator/tran
 
 ## Setup
 Fork/Clone the repo... Describe assets/storage patterns...
+
+### Requirements
+npm 5?
+Node something?
+
+
 
 ### NPM Scripts
 
