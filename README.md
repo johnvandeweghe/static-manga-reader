@@ -52,7 +52,37 @@ npm run clean
 ```
 ## Meta data formats
 
+All data for the site is stored in meta files as json. The data is broken in to two main categories: raw data, and generated views.
+
+The default directory for the meta data is the ```src/assets/meta``` folder. Examples are provided and should be replaced with your actual data.
+
 ### Manga
+Each manga is stored in it's own file, named in the following format:
+```m-MANGAID.json```
+Where MANGAID is the GUID for the manga. Must match ID in the file.
+The following fields exist on each Manga object:
+- **id**: This is the unique id for the file, GUIDs are used, but technically as long as the file name matches the id field it can be anything.
+- **name**: This is the name that will be displayed for the manga.
+- **imageUrl**: This is a url to an image to display for the manga. You may also use a data url, but that will make your meta files larger and is only recommended for sites hosting small quantities of manga.
+- **description**: A description for the manga.
+- **genres**: A list of strings which are the generes for the manga. Unused currently.
+- **author**: A name to display as the author of the manga.
+- **artist**: A name to display as the artist of the manga.
+
+Here is an example file with all fields filled.
+```
+Filename: src/assets/meta/m-a07c7408-c5c6-4fe4-92c6-af3f2be2960a.json
+Contents:
+{
+  "id": "a07c7408-c5c6-4fe4-92c6-af3f2be2960a",
+  "name": "Sample Manga 2",
+  "imageUrl": "/assets/img/logo.png",
+  "description": "Vestibulum sollicitudin ex at tellus feugiat sollicitudin.",
+  "genres": [],
+  "author": "John",
+  "artist": "John"
+}
+```
 
 ### Chapters
 
