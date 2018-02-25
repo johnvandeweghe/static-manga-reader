@@ -85,6 +85,36 @@ Contents:
 ```
 
 ### Chapters
+All chapters for a manga are stored in a json array in a single file named like the following:
+```c-MANGAID.json```
+Where MANGAID is a valid identifier for a manga appearing in its own file.
+The array order determines the display order. No sorting is performed intentionally to allow for weird chapter labels.
+The following fields exist on a chapter object:
+- **id**: A unique ID for the chapter. As with manga, GUIDs are used, but anything can be so long as it is unique across all manga to prevent collisions in the page data.
+- **label**: A display name for the chapter.
+- **releaseDate**: The date to display that the chapter was uploaded. Dates are treated as UTC by default. Should be in the following format: ``YYYY-MM-DD HH:MM:SS```
+
+Here is an example file:
+```
+Filename: src/assets/meta/c-a07c7408-c5c6-4fe4-92c6-af3f2be2960a.json
+[
+  {
+    "id": "3658E791-2D1B-C460-EBAB-63D32DB50FE1",
+    "label": "Chapter 1",
+    "releaseDate": "2018-02-09 13:12:12"
+  },
+  {
+    "id": "4658E791-2D1B-C460-EBAB-63D32DB50FE2",
+    "label": "Chapter 2",
+    "releaseDate": "2018-02-09 13:12:12"
+  },
+  {
+    "id": "5658E791-2D1B-C460-EBAB-63D32DB50FE3",
+    "label": "Chapter 3",
+    "releaseDate": "2018-02-09 13:12:12"
+  }
+]
+```
 
 ### Pages
 
