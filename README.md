@@ -97,6 +97,7 @@ The following fields exist on a chapter object:
 Here is an example file:
 ```
 Filename: src/assets/meta/c-a07c7408-c5c6-4fe4-92c6-af3f2be2960a.json
+Contents:
 [
   {
     "id": "3658E791-2D1B-C460-EBAB-63D32DB50FE1",
