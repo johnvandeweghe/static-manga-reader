@@ -18,6 +18,13 @@ A manga/webtoon reader written to cut costs, and boost speeds of scanalator/tran
 - A UI for building manga meta data; Currently all meta data must be crafted by hand.
 
 ## Setup
+
+### Requirements (Build)
+- npm 5+
+- A corresponding version of nodejs
+
+### Installation
+
 1. Fork/Clone the repo (Fork if you intend to make changes but would like to have a nice path to pull in furture updates).
 2. Install dependencies with ```npm install```
 3. Add meta data to assets/meta.
@@ -26,35 +33,6 @@ A manga/webtoon reader written to cut costs, and boost speeds of scanalator/tran
 
 To test changes to the project, run ```npm run dev```, which will open a browser and serve the local project. You will need to run the meta compiler when meta changes are made: ```npm run meta-dev```. Non meta changes should trigger reloads.
 
-
-### Requirements (Build)
-- npm 5+
-- A corresponding version of nodejs
-
-### NPM Scripts
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build meta view assets for dev (src/assets)
-npm run meta-dev
-
-# build meta view assets for prod (dist/assets)
-npm run meta
-
-# lint the Typescript
-npm run lint
-
-# build for production with minification (includes view asset compilation)
-npm run build
-
-# clean the production build
-npm run clean
-```
 ## Meta data formats
 
 All data for the site is stored in meta files as json. The data is broken in to two main categories: raw data, and generated views.
