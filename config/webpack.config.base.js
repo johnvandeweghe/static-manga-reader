@@ -10,7 +10,7 @@ let config = {
     path: helpers.root('/dist'),
     filename: 'js/[name].[hash].js',
     chunkFilename: 'js/[name].[hash].js',
-    publicPath: '/'
+    publicPath: '/static-manga-reader/'
   },
   devtool: 'source-map',
   resolve: {
