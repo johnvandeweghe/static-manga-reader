@@ -2,7 +2,7 @@
   {
     "id": "a07b7408-c5c6-4fe4-92c6-af3f2be2960a",
     "name": "Sample Manga",
-    "imageUrl": "/assets/img/Sample Comic/0.png",
+    "imageUrl": "/static-manga-reader/assets/img/Sample Comic/0.png",
     "author": "John",
     "artist": "John",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellent..."

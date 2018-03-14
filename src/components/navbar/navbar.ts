@@ -7,6 +7,7 @@ import bNavbarBrand from 'bootstrap-vue/es/components/navbar/navbar-brand'
 import bNavbarNav from 'bootstrap-vue/es/components/navbar/navbar-nav'
 import { Link } from './link'
 import { Logger } from '../../util/log'
+import { publicDir } from '../../config'
 
 @Component({
   template: require('./navbar.html'),
@@ -23,8 +24,8 @@ export class NavbarComponent extends Vue {
 
   object: { default: string } = { default: 'Default object property!' }
   links: Link[] = [
-    new Link('Recently Updated', '/'),
-    new Link('Manga List', '/manga-list')
+    new Link('Recently Updated', publicDir),
+    new Link('Manga List', publicDir + 'manga-list')
   ]
 
   protected logger: Logger
