@@ -9,7 +9,7 @@ import './sass/main.scss'
 import { AxiosDataService } from './reader/axios-data-service'
 Vue.use(require('vue-moment'))
 
-const dataService = new AxiosDataService('/assets/', axios)
+const dataService = new AxiosDataService('/static-manga-reader/assets/', axios)
 
 // tslint:disable-next-line:no-unused-expression
 new Vue({
