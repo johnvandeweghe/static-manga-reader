@@ -24,12 +24,8 @@
     "test": "cross-env NODE_ENV=development karma start config/karma.unit.js",
     "test:debug": "cross-env NODE_ENV=development karma start config/karma.debug.js",
     "test:watch": "cross-env NODE_ENV=development karma start config/karma.unit.js --singleRun=false --auto-watch",
-    "meta:mangalist-dev": "cat src/assets/meta/m-* | jq --slurp '[.[] | {id: .id, name: .name, imageUrl: .imageUrl, author: .author, artist: .artist, description: (.description[0:64]+\"...\")}] | sort_by(.name)' > src/assets/mangalist.json",
-    "meta:mangalist": "cat dist/assets/meta/m-* | jq --slurp '[.[] | {id: .id, name: .name, imageUrl: .imageUrl, author: .author, artist: .artist, description: (.description[0:64]+\"...\")}] | sort_by(.name)' > dist/assets/mangalist.json",
-    "meta:updatedlist-dev": "jq '[.[] | (. + {releaseDate: .releaseDate | strptime(\"%Y-%m-%d %H:%M:%S %Z\")|mktime, mangaId: input_filename | .[-41:-5]})] | sort_by(.releaseDate) | reverse' src/assets/meta/c-* | jq --slurpfile mangalist src/assets/mangalist.json --slurp '[.[][]] | sort_by(.releaseDate) | reverse | .[0:50] | [.[] as $chapter | {chapter: ($chapter | del(.mangaId)), manga: ($mangalist[][] | select(.id == $chapter.mangaId))}]' > src/assets/updatedlist.json",
-    "meta:updatedlist": "jq '[.[] | (. + {releaseDate: .releaseDate | strptime(\"%Y-%m-%d %H:%M:%S %Z\")|mktime, mangaId: input_filename | .[-41:-5]})] | sort_by(.releaseDate) | reverse' dist/assets/meta/c-* | jq --slurpfile mangalist dist/assets/mangalist.json --slurp '[.[][]] | sort_by(.releaseDate) | reverse | .[0:50] | [.[] as $chapter | {chapter: ($chapter | del(.mangaId)), manga: ($mangalist[][] | select(.id == $chapter.mangaId))}]' > dist/assets/updatedlist.json",
-    "meta": "npm run meta:mangalist && npm run meta:updatedlist",
-    "meta-dev": "npm run meta:mangalist-dev && npm run meta:updatedlist-dev"
+    "meta": "./build-meta.sh dist/assets",
+    "meta-dev": "./build-meta.sh src/assets"
   },
   "dependencies": {
     "axios": "~0.17.1",

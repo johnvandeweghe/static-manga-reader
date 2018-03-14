@@ -20,8 +20,10 @@ A manga/webtoon reader written to cut costs, and boost speeds of scanalator/tran
 ## Setup
 
 ### Requirements (Build)
+- A unix environment for building
 - npm 5+
 - A corresponding version of nodejs
+- jq (available from apt, and probably brew)
 
 ### Installation
 
