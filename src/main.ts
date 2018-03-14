@@ -7,9 +7,10 @@ const navbarComponent = () => import('./components/navbar').then(({ NavbarCompon
 
 import './sass/main.scss'
 import { AxiosDataService } from './reader/axios-data-service'
+import { publicDir } from './config'
 Vue.use(require('vue-moment'))
 
-const dataService = new AxiosDataService('/static-manga-reader/assets/', axios)
+const dataService = new AxiosDataService(publicDir + 'assets/', axios)
 
 // tslint:disable-next-line:no-unused-expression
 new Vue({
